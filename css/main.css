@@ -22,6 +22,18 @@
     font-size: 1.6em;
 }
 
+
+/*Hide Button*/
+.hideBtn{
+    padding-left: 8px;
+}
+
+/*Show Calculation Button*/
+.ShowBtnArea{
+    padding-left: 25px;
+}
+
+
 /*Input Area*/
 
 .SalaryLabel{
