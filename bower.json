@@ -1,0 +1,23 @@
+{
+  "name": "ExpenseCalculator",
+  "homepage": "https://github.com/jeffward01/ExpenseCalculator",
+  "authors": [
+    "Jeff Ward <jeffwardcoding@gmail.com>"
+  ],
+  "description": "an Expense Calculator written in AngularJS",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8"
+  }
+}
