@@ -25,64 +25,77 @@
     </div>
 
     <div class="MainContainer"></div>
-   <div class="ShowBtnArea">
-       <button type="button" class="btn showBtn btn-warning">Show Calculation Type</button>
+    <div class="ShowBtnArea">
+        <button type="button" class="btn showBtn btn-warning">Show Calculation Type</button>
 
-       
-   </div>
-   
-   <div class="TypeSelectArea">
-       
-       <h4>Please select a <span class="element">Salary</span> or <span class="element">Hourly</span> Calculation <span class="hideBtn"><button type="button" class="btn-xs hideBtn btn-warning">hide</button></span>
+
+    </div>
+
+    <div class="TypeSelectArea">
+
+        <h4>Please select a <span class="element">Salary</span> or <span class="element">Hourly</span> Calculation <span class="hideBtn"><button type="button" class="btn-xs hideBtn btn-warning">hide</button></span>
 
 </h4>
-<div class="btn-group">
-	<button type="button" class="btn btn-success SalaryModeBtn" style="color:black">Salary</button>
-	<button type="button" class="btn btn-info HourlyModeBtn" style="color:black">Hourly</button>
-</div>
-
-   </div>
-
-
-   
-   <div class="SalaryMode">
-   <h1>Salary Mode</h1>
-    <div class="row clearfix">
-        <div class="col-md-4 pull-left">
-            <h3>Please input your information:</h3>
+        <div class="btn-group">
+            <button type="button" class="btn btn-success SalaryModeBtn" style="color:black">Salary</button>
+            <button type="button" class="btn btn-info HourlyModeBtn" style="color:black">Hourly</button>
         </div>
+
     </div>
-    <div class="col-md-6">
-        <div class="SalaryInputArea">
-    <h4 class="SalaryLabel">Salary:</h4>
-           
-            <div class="input-group">
-                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Input Yearly Salary">
-              
+
+
+
+    <div class="SalaryMode">
+        <h1 style="padding-left: 50px;">Salary Mode</h1>
+        <div class="row clearfix">
+
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <div class="SalaryInputArea">
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">Salary</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$105,000">
+                </div>
             </div>
+
+        </div>
+        <div class="col-md-2">
+
+            <div>
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">Tax-Bracket</span>
+
+                    <div class="dropdown" id="dropdownMenu2">
+                        <button class="btn btn-primary" data-toggle="dropdown">
+                            <span id="dropdown_title2">Select</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">10%</a></li>
+                            <li><a tabindex="-1" href="#">15%</a></li>
+                            <li><a tabindex="-1" href="#">25%</a></li>
+                            <li><a tabindex="-1" href="#">28%</a></li>
+                            <li><a tabindex="-1" href="#">33%</a></li>
+                            <li><a tabindex="-1" href="#">35%</a></li>
+                            <li><a tabindex="-1" href="#">39.6%</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
 
     </div>
-    <div class="col-md-6">
-        <div class="radio">
-            <label>
-                <span class="label label-TaxBrackets">Tax Brackets</span>
 
 
-                <input type="radio" name="" id="input" value="" checked="checked"> Radio Box
-            </label>
-        </div>
-
-
-    </div>
-
-</div>
-   
-   
     <div class="HourlyMode">
-        <h1>HourlyMode</h1>
-        
-        
+        <h1 style="padding-left: 50px;">HourlyMode</h1>
+
+
     </div>
 
 

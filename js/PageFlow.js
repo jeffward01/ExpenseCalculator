@@ -35,6 +35,13 @@ $(document).ready(function () {
 
 
     })
+    
+    
+    //Drop down Menu 
+    $("#dropdownMenu2").on("click", "li a", function() {
+    var platform = $(this).text();
+    $("#dropdown_title2").html(platform);
+});    
 
 
 
