@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
     <title>Expense Calculator</title>
 </head>
 
+<<<<<<< HEAD
 <body ng-controller="ExpenseCaclController">
 
     <div class="JumboTronContainer">
@@ -226,17 +228,38 @@
 
 
 
+=======
+<body>
+>>>>>>> 4376e894ba71888fe080b9719309046931bf037e
 
+    <div ui-view></div>
 
 
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="js/PageFlow.js" type="text/javascript"></script>
+    <script src="bower_components/spin.js/spin.min.js" type="text/javascript"></script>
+    <script src="bower_components/toastr/toastr.min.js" type="text/javascript"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
 
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script type="text/javascript" src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    <script type="text/javascript" src="bower_components/angular-filter-count-to/dist/angular-filter-count-to.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
+
+    <script src="js/PageFlow.js" type="text/javascript"></script>
 
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/app/app.ctrl.js" type="text/javascript"></script>
+
+    <script src="js/app/Expense/expense.ctrl.js" type="text/javascript"></script>
+    <script src="js/app/Hourly/hourly.ctrl.js" type="text/javascript"></script>
+    <script src="js/app/Salary/salary.ctrl.js" type="text/javascript"></script>
+
+
 
 </body>
 
