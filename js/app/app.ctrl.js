@@ -5,18 +5,18 @@ angular.module('app').controller("ExpenseCaclController", function ($scope, $tim
     //Calculation Mode
     var mode;
 
-    $scope.SalaryMode = function() {
+    $scope.SalaryMode = function () {
         mode = "Salary";
         alert(mode);
     }
 
-    $scope.HourlyMode = function() {
+    $scope.HourlyMode = function () {
         mode = "Hourly";
         alert(mode);
 
     }
 
-    $scope.currentMode = function(x) {
+    $scope.currentMode = function (x) {
         if (mode == x) {
             return true;
         } else {
@@ -24,30 +24,56 @@ angular.module('app').controller("ExpenseCaclController", function ($scope, $tim
         }
     }
 
-    
+
     //Tax Bracket
-    $scope.itemList=[];
+    $scope.itemList = [];
     $scope.TaxBracket = $('dropdown_title2').val();
-    $scope.TaxBrackets = [{percent: 10}, {percent: 15},{percent: 25},{percent: 28}, {percent:33}, {percent:35}, {percent:39.6}];
-    $scope.changedValue=function(item){
-    $scope.itemList.push(item.name);
-    //Calcualtor Area
-    
-    $scope.expenses = [];
-    
-    $scope.expense = {};
-    
-    $scope.AddExpense = function(){
-      
-        $scope.expenses.push({
-            title: $scope.title,
-            amount: $scope.amount
-        });
+    $scope.TaxBrackets = [{
+        percent: 10
+    }, {
+        percent: 15
+    }, {
+        percent: 25
+    }, {
+        percent: 28
+    }, {
+        percent: 33
+    }, {
+        percent: 35
+    }, {
+        percent: 39.6
+    }];
+    $scope.changedValue = function (item) {
+        $scope.itemList.push(item.name);
+        //Calcualtor Area
+
+        $scope.expenses = [];
+
+        $scope.expense = {};
+
+        $scope.AddExpense = function () {
+
+            $scope.expenses.push({
+                title: $scope.title,
+                amount: $scope.amount
+            });
+        }
+    };
+
+    $scope.deleteExpense = function () {
+        $scope.expenses.splice(this.$index, 1);
+
     }
-};
-    
-    $scope.deleteExpense = function(){
-        $scope.expenses.splice(this.$index,1);
-        
-    }
+
+   $scope.totalAmount = function(){
+       var total = 0;
+       for (var i = 0; i < $scope.expenses.length; i++) {
+              total = total + parseInt($scope.expenses[i].Amount);
+            }
+       return total;
+}
+
+ 
+
+
 });
