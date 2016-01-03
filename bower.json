@@ -18,7 +18,18 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.6",
-    "angular": "~1.4.8",
-    "font-awesome": "~4.5.0"
+    "font-awesome": "~4.5.0",
+    "angular-loading-bar": "~0.8.0",
+    "angular-resource": "~1.4.8",
+    "angular-local-storage": "~0.2.3",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "angular-ui": "~0.4.0",
+    "angular-bootstrap": "~0.14.3",
+    "angular-spinner": "~0.8.0",
+    "angular-filter-count-to": "~0.0.3",
+    "toastr": "~2.1.2",
+    "angular-sanitize": "~1.4.8",
+    "ui-bootstrap": "~0.14.3",
+    "angular": "~1.4.8"
   }
 }

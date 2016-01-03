@@ -1,0 +1,141 @@
+<div class="SalaryMode">
+    <h1 style="padding-left: 50px;">Salary Mode</h1>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+            <div class="SalaryInputArea">
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">Salary</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$105,000">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">Tax-Bracket</span>
+
+                    <div class="dropdown" id="dropdownMenu2">
+                        <button class="btn btn-primary" data-toggle="dropdown">
+                            <span id="dropdown_title2">Select</span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">10%</a></li>
+                            <li><a tabindex="-1" href="#">15%</a></li>
+                            <li><a tabindex="-1" href="#">25%</a></li>
+                            <li><a tabindex="-1" href="#">28%</a></li>
+                            <li><a tabindex="-1" href="#">33%</a></li>
+                            <li><a tabindex="-1" href="#">35%</a></li>
+                            <li><a tabindex="-1" href="#">39.6%</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Add Expense Area    -->
+    <div style="padding-top: 25px;" class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-2">
+
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">Title:</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ie: Rent">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">Amount:</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$2500">
+            </div>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn addExepenseBtn btn-success">Add Expenese</button>
+        </div>
+    </div>
+
+    <!--   Display Expenses   -->
+    <div class="ExpenseTable">
+        <div class="row center">
+
+            <div class="col-md-6 col-md-offset-2">
+
+                <div class="well well-lg">
+                    <h3>Expenses</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center">Description</th>
+                                <th style="text-align:center">Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rent</td>
+                                <td>$2500</td>
+                                <td>
+
+                                    <a class="btn btn-default btn-sm" ng-click="editExpense(expense)">
+                                        <i class="fa fa-pencil fa-fw"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" ng-click="deleteExpense(expense)">
+                                        <i class="fa fa-trash-o fa-fw"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="well well-lg">
+                    <h3>Analysis</h3>
+
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monthly Income Pre-Tax</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>Monthly Income Post-Tax</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>Total Monthly Expenses</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>Total Monthly Savings</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td>Percent of Income Spent</td>
+                                <td>75%</td>
+                            </tr>
+                            <tr>
+                                <td>Percent of Income Saved</td>
+                                <td>25%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

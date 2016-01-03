@@ -5,228 +5,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" media="screen" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/src/loading-bar.css">
+    <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
     <title>Expense Calculator</title>
 </head>
 
-<body ng-controller="ExpenseCaclController">
+<body>
 
-    <div class="JumboTronContainer">
-        <div class="jumbotron">
-            <div class="container">
-                <h1>Expense Calculator</h1>
-                <p>Calculate your <span class="JumbotronSubTotal">total</span> monthly <span class="JumbotronSubtitle">Savings</span> after inputting <strong class="JumboSubElement">Salary/Hours</strong> and <strong class="JumboSubElement1">Expenses</strong>.</p>
-                <!--                <p>
-                    <a class="btn btn-primary btn-lg">Learn more</a>
-                </p> -->
-            </div>
-        </div>
-    </div>
-
-    <div class="MainContainer"></div>
-    <div class="ShowBtnArea">
-        <button type="button" class="btn showBtn btn-warning">Show Calculation Type</button>
-
-
-    </div>
-
-    <div class="TypeSelectArea">
-
-        <h4>Please select a <span class="element">Salary</span> or <span class="element">Hourly</span> Calculation <span class="hideBtn"><button type="button" class="btn-xs hideBtn btn-warning">hide</button></span>
-
-</h4>
-        <div class="btn-group">
-            <button type="button" class="btn btn-success SalaryModeBtn" style="color:black">Salary</button>
-            <button type="button" class="btn btn-info HourlyModeBtn" style="color:black">Hourly</button>
-        </div>
-
-    </div>
-
-
-
-    <div class="SalaryMode">
-        <h1 style="padding-left: 50px;">Salary Mode</h1>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-2">
-                <div class="SalaryInputArea">
-
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">Salary</span>
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$105,000">
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-2">
-
-                <div>
-
-                    <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">Tax-Bracket</span>
-
-                        <div class="dropdown" id="dropdownMenu2">
-                            <button class="btn btn-primary" data-toggle="dropdown">
-                                <span id="dropdown_title2">Select</span>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">10%</a></li>
-                                <li><a tabindex="-1" href="#">15%</a></li>
-                                <li><a tabindex="-1" href="#">25%</a></li>
-                                <li><a tabindex="-1" href="#">28%</a></li>
-                                <li><a tabindex="-1" href="#">33%</a></li>
-                                <li><a tabindex="-1" href="#">35%</a></li>
-                                <li><a tabindex="-1" href="#">39.6%</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--    Add Expense Area    -->
-        <div style="padding-top: 25px;" class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-2">
-
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon3">Title:</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ie: Rent">
-                </div>
-
-            </div>
-            <div class="col-md-2">
-
-                <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon3">Amount:</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$2500">
-                </div>
-
-            </div>
-            <div class="col-md-2">
-                <button type="button" class="btn addExepenseBtn btn-success">Add Expenese</button>
-            </div>
-        </div>
-
-        <!--   Display Expenses   -->
-        <div class="ExpenseTable">
-            <div class="row center">
-                
-                <div class="col-md-6 col-md-offset-2">
-
-                    <div class="well well-lg">
-                       <h3>Expenses</h3>
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th style="text-align:center">Description</th>
-                                    <th style="text-align:center">Amount</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Rent</td>
-                                    <td>$2500</td>
-                                    <td>
-
-                                        <a class="btn btn-default btn-sm" ng-click="editExpense(expense)">
-                                            <i class="fa fa-pencil fa-fw"></i>
-                                        </a>
-                                        <a class="btn btn-danger btn-sm" ng-click="deleteExpense(expense)">
-                                            <i class="fa fa-trash-o fa-fw"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-
-                    <div class="well well-lg">
-                        <h3>Analysis</h3>
-
-
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Monthly Income Pre-Tax</td>
-                                    <td>500</td>
-                                </tr>
-                                <tr>
-                                    <td>Monthly Income Post-Tax</td>
-                                    <td>500</td>
-                                </tr>
-                                <tr>
-                                    <td>Total Monthly Expenses</td>
-                                    <td>500</td>
-                                </tr>
-                                <tr>
-                                    <td>Total Monthly Savings</td>
-                                    <td>500</td>
-                                </tr>
-                                <tr>
-                                    <td>Percent of Income Spent</td>
-                                    <td>75%</td>
-                                </tr>
-                                <tr>
-                                    <td>Percent of Income Saved</td>
-                                    <td>25%</td>
-                                </tr>
-
-
-                            </tbody>
-                        </table>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-        </div>
-
-
-
-
-
-
-    </div>
-
-
-    <div class="HourlyMode">
-        <h1 style="padding-left: 50px;">HourlyMode</h1>
-
-
-    </div>
-
-
-
-
+    <div ui-view></div>
 
 
     <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="js/PageFlow.js" type="text/javascript"></script>
+    <script src="bower_components/spin.js/spin.min.js" type="text/javascript"></script>
+    <script src="bower_components/toastr/toastr.min.js" type="text/javascript"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
 
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script type="text/javascript" src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
+    <script type="text/javascript" src="bower_components/angular-filter-count-to/dist/angular-filter-count-to.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js" type="text/javascript"></script>
+
+    <script src="js/PageFlow.js" type="text/javascript"></script>
 
     <script src="js/app.js" type="text/javascript"></script>
     <script src="js/app/app.ctrl.js" type="text/javascript"></script>
+
+    <script src="js/app/Expense/expense.ctrl.js" type="text/javascript"></script>
+    <script src="js/app/Hourly/hourly.ctrl.js" type="text/javascript"></script>
+    <script src="js/app/Salary/salary.ctrl.js" type="text/javascript"></script>
+
+
 
 </body>
 
