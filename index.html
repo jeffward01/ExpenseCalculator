@@ -85,31 +85,63 @@
                 </div>
             </div>
         </div>
-        
-        <div style="padding-top: 25px;"class="row">
+
+        <!--    Add Expense Area    -->
+        <div style="padding-top: 25px;" class="row">
             <div class="col-md-4"></div>
             <div class="col-md-2">
-                
-                   <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">Title:</span>
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ie: Rent">
-                    </div>
-                
-            </div>
-                  <div class="col-md-2">
-                
-                   <div class="input-group">
-                        <span class="input-group-addon" id="basic-addon3">Amount:</span>
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$2500">
-                    </div>
-                
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">Title:</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ie: Rent">
+                </div>
+
             </div>
             <div class="col-md-2">
-            <button type="button" class="btn addExepenseBtn btn-success">Add Expenese</button>
+
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon3">Amount:</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$2500">
+                </div>
+
             </div>
-
-
+            <div class="col-md-2">
+                <button type="button" class="btn addExepenseBtn btn-success">Add Expenese</button>
+            </div>
         </div>
+
+        <!--   Display Expenses   -->
+        <div class="ExpenseTable">
+        <div class="row center">
+            <div class="col-md-6 col-md-offset-3">
+
+                <div class="well well-lg">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center">Description</th>
+                                <th style="text-align:center">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>[data]</td>
+                                <td>[data]</td>
+                            </tr>
+                            <tr>
+                                <td>[data]</td>
+                                <td>[data]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+
+
 
 
     </div>

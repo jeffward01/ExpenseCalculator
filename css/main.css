@@ -61,3 +61,11 @@
 
 }
 
+.center{
+    margin: 0 auto;
+    text-align: center;
+}
+.ExpenseTable{
+    padding-top: 20px;
+}
+
