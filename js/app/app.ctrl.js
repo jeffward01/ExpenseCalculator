@@ -55,7 +55,7 @@ angular.module('app').controller("ExpenseCaclController", function ($scope, $tim
 
             $scope.expenses.push({
                 title: $scope.title,
-                amount: $scope.amount
+                amount: parseInt($scope.amount)
             });
         }
     };
@@ -70,9 +70,12 @@ angular.module('app').controller("ExpenseCaclController", function ($scope, $tim
        for (var i = 0; i < $scope.expenses.length; i++) {
               total = total + parseInt($scope.expenses[i].Amount);
             }
+       
+       
        return total;
 }
 
+   
  
 
 
