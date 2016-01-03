@@ -24,6 +24,20 @@ angular.module('app').controller("ExpenseCaclController", function ($scope, $tim
         }
     }
 
+    
+    //Calcualtor Area
+    
+    $scope.expenses = [];
+    
+    $scope.expense = {};
+    
+    $scope.AddExpense = function(){
+      
+        $scope.expenses.push({
+            title: $scope.title,
+            amount: $scope.amount
+        });
+    }
 
 
 

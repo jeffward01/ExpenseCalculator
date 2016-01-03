@@ -94,7 +94,7 @@
 
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon3">Title:</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="ie: Rent">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="title" placeholder="ie: Rent">
                 </div>
 
             </div>
@@ -102,12 +102,12 @@
 
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon3">Amount:</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$2500">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="amount" placeholder="$2500">
                 </div>
 
             </div>
             <div class="col-md-2">
-                <button type="button" class="btn addExepenseBtn btn-success">Add Expenese</button>
+                <button type="button" ng-click="AddExpense()" class="btn addExepenseBtn btn-success">Add Expenese</button>
             </div>
         </div>
 
@@ -128,9 +128,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Rent</td>
-                                    <td>$2500</td>
+                                <tr ng-repeat="expense in expenses">
+                                    <td>{{expense.title}}</td>
+                                    <td>{{expense.amount}}</td>
                                     <td>
 
                                         <a class="btn btn-default btn-sm" ng-click="editExpense(expense)">
