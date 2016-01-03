@@ -55,7 +55,7 @@
 
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon3">Salary</span>
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="$105,000">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="salary" placeholder="$105,000">
                     </div>
                 </div>
 
@@ -67,21 +67,9 @@
                     <div class="input-group">
                         <span class="input-group-addon" id="basic-addon3">Tax-Bracket</span>
 
-                        <div class="dropdown" id="dropdownMenu2">
-                            <button class="btn btn-primary" data-toggle="dropdown">
-                                <span id="dropdown_title2">Select</span>
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a tabindex="-1" href="#">10%</a></li>
-                                <li><a tabindex="-1" href="#">15%</a></li>
-                                <li><a tabindex="-1" href="#">25%</a></li>
-                                <li><a tabindex="-1" href="#">28%</a></li>
-                                <li><a tabindex="-1" href="#">33%</a></li>
-                                <li><a tabindex="-1" href="#">35%</a></li>
-                                <li><a tabindex="-1" href="#">39.6%</a></li>
-                            </ul>
-                        </div>
+                        <select ng-model="TaxBracket" ng-change="changedValue(TaxBracket)" data-ng-options="Bracket as Bracket.percent for Bracket in TaxBrackets">
+                            <option value="">Select Tax Bracket</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -94,7 +82,7 @@
 
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon3">Title:</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="title" placeholder="ie: Rent">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="title" placeholder="ie: Rent" >
                 </div>
 
             </div>
@@ -102,7 +90,7 @@
 
                 <div class="input-group">
                     <span class="input-group-addon" id="basic-addon3">Amount:</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="amount" placeholder="$2500">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ng-model="amount" placeholder="$2500" >
                 </div>
 
             </div>
@@ -114,11 +102,11 @@
         <!--   Display Expenses   -->
         <div class="ExpenseTable">
             <div class="row center">
-                
+
                 <div class="col-md-6 col-md-offset-2">
 
                     <div class="well well-lg">
-                       <h3>Expenses</h3>
+                        <h3>Expenses</h3>
                         <table class="table table-striped">
                             <thead>
                                 <tr>
@@ -136,7 +124,7 @@
                                         <a class="btn btn-default btn-sm" ng-click="editExpense(expense)">
                                             <i class="fa fa-pencil fa-fw"></i>
                                         </a>
-                                        <a class="btn btn-danger btn-sm" ng-click="deleteExpense(expense)">
+                                        <a class="btn btn-danger btn-sm" ng-click="deleteExpense()">
                                             <i class="fa fa-trash-o fa-fw"></i>
                                         </a>
                                     </td>
@@ -153,6 +141,28 @@
                     <div class="well well-lg">
                         <h3>Analysis</h3>
 
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Total Salary</td>
+                                    <td>{{salary | currency:"$":0}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tax-Bracket</td>
+                                    <td>{{TaxBracket.percent}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+
+                        <span class="divider">____________</span>
 
                         <table class="table table-striped">
                             <thead>

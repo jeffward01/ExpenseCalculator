@@ -41,6 +41,8 @@ $(document).ready(function () {
     $("#dropdownMenu2").on("click", "li a", function() {
     var platform = $(this).text();
     $("#dropdown_title2").html(platform);
+        $("#dropdown_title2").val(platform);
+
 });    
 
 
